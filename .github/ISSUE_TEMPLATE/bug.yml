@@ -1,0 +1,52 @@
+name: Signaler un bug
+description: Décrire un problème rencontré dans Charette.
+title: "[Bug] "
+labels: ["bug", "à trier"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ce retour et ses captures seront publics. Ne publiez aucune donnée personnelle ni aucun secret."
+  - type: input
+    id: version
+    attributes:
+      label: Version du jeu
+      placeholder: "Version affichée dans le jeu, ou inconnue"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode de jeu
+      options:
+        - Solo
+        - Multijoueur — hôte
+        - Multijoueur — client
+        - Inconnu
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      placeholder: "1. …\n2. …\nPrécisez si le problème se reproduit à chaque fois."
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Résultat attendu
+      placeholder: Que devait-il se passer ?
+    validations:
+      required: true
+  - type: textarea
+    id: observe
+    attributes:
+      label: Résultat observé
+      placeholder: Que s'est-il passé ?
+    validations:
+      required: true
+  - type: textarea
+    id: capture
+    attributes:
+      label: Capture ou précision supplémentaire (facultatif)
+      description: "Vous pouvez ajouter une capture après avoir masqué toute information personnelle ou secrète."
