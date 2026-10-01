@@ -1,0 +1,31 @@
+name: Proposer une suggestion
+description: Proposer une amélioration pour Charette.
+title: "[Suggestion] "
+labels: ["suggestion", "à trier"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ce retour et ses captures seront publics. Ne publiez aucune donnée personnelle ni aucun secret."
+  - type: input
+    id: version
+    attributes:
+      label: Version du jeu (facultatif)
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Votre suggestion
+      placeholder: Quelle amélioration souhaitez-vous ?
+    validations:
+      required: true
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Situation et bénéfice attendu
+      placeholder: "Dans quelle situation serait-elle utile ? Précisez le mode solo ou multijoueur si pertinent."
+    validations:
+      required: true
+  - type: textarea
+    id: precision
+    attributes:
+      label: Exemple ou capture (facultatif)
+      description: "Masquez toute information personnelle ou secrète."
