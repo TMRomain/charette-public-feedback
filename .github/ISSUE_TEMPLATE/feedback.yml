@@ -1,0 +1,24 @@
+name: Autre feedback
+description: Partager une impression ou un autre retour sur Charette.
+title: "[Feedback] "
+labels: ["feedback", "à trier"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ce retour et ses captures seront publics. Ne publiez aucune donnée personnelle ni aucun secret."
+  - type: input
+    id: version
+    attributes:
+      label: Version du jeu (facultatif)
+  - type: textarea
+    id: retour
+    attributes:
+      label: Votre retour
+      placeholder: Qu'aimeriez-vous nous partager ?
+    validations:
+      required: true
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte ou capture (facultatif)
+      description: "Précisez le mode solo ou multijoueur si pertinent. Masquez toute information personnelle ou secrète."
